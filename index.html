@@ -1,19 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Generator</title>
-    #chicken 
+    <link rel="stylesheet" href="myStyles.css">
 </head>
 <body>
-    <h1>Create Your Password!</h1>
-    <div id = "chicken">Length of Password: <input type="number" name = "something" value="x"> <br>
-        Uppercase: <input type="checkbox" name="something" value = "on"><br>
-        Lowercase: <input type="checkbox" name="something" value = "on"><br> 
-        Symbols: <input type="checkbox" name="something" value = "on"><br>
+    <div class="container">
+        <h1>Generate a Password!</h1>
+        <div class = "setting">
+            <label for="length">Password Length</label>
+            <input type="number" id="length" min="6" max="40" value = "10">
+        </div>
+        <div class = "setting">
+            <label for="includeSymbols">Include Symbols</label>
+            <input type="checkbox" id = "includeSymbols">
+        </div>
+        <div class = "setting">
+            <label for="includeUpper">Include Uppercase</label>
+            <input type="checkbox" id = "includeUpper">
+        </div>
+        <div class = "setting">
+            <label for="includeLower">Include Lowercase</label>
+            <input type="checkbox" id = "includeLower">
+        </div>
+        <button type="sumbit" class="gbtn" >
+            Generate Password
+        </button>
     </div>
-
-    <script type="text/javascript">
-        document.write("AHHHHHHH");
-    </script>
 </body>
 </html>
