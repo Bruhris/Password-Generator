@@ -5,14 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Generator</title>
+    <!--Links to the CSS stylesheet and the JavaScript page-->
     <link rel="stylesheet" href="myStyles.css">
+    <script src="myScripts.js"></script>
 </head>
 <body>
-    <div class="container">
+    <!--Put the main content of the page under a div with class of container-->
+    <div class="box">
         <h1>Generate a Password!</h1>
+        <form>
+        <!--Divides the different password option under same class-->
         <div class = "setting">
             <label for="length">Password Length</label>
-            <input type="number" id="length" min="6" max="40" value = "10">
+            <input type="range" id="characterLengthRange" min="6" max="40" value="12">
+            <input type="number" id="characterLengthNumber" min="6" max="40" value = "12">
         </div>
         <div class = "setting">
             <label for="includeSymbols">Include Symbols</label>
@@ -26,9 +32,10 @@
             <label for="includeLower">Include Lowercase</label>
             <input type="checkbox" id = "includeLower">
         </div>
-        <button type="sumbit" class="gbtn" >
+        <button type="sumbit" class="gbtn">
             Generate Password
         </button>
+        </form>
     </div>
 </body>
 </html>
