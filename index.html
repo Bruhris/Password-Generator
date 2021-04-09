@@ -13,24 +13,21 @@
     <!--Put the main content of the page under a div with class of container-->
     <div class="box">
         <h1 class = "title">Generate a Password!</h1>
-        <h3 id = "password" class = "pass"></h3>
-        <form class="inputs" id="passwordGenerator">
+        <h3 id = "passwordDisplay" class = "pass">asdasd</h3>
+        <form class="inputs" id="passwordGeneratorForm">
             <label for="length">Password Length</label>
             <div class = "setting">
-                <input type="range" id="characterLengthRange" min="6" max="40" value="12">
-                <input class="numInput" type="number" id="characterLengthNumber" min="6" max="40" value = "12">
+                <input type="range" id="characterAmountRange" min="6" max="40" value="12">
+                <input class="numInput" type="number" id="characterAmountNumber" min="6" max="40" value = "12">
             </div>
-                <label for="includeUpper">Include Uppercase</label>
-                <input type="checkbox" id = "includeUpper" checked>
-                
-                <label for="includeLower">Include Lowercase</label>
-                <input type="checkbox" id = "includeLower" checked>
+                <label for="includeUppercase">Include Uppercase</label>
+                <input type="checkbox" id = "includeUppercase">
                 
                 <label for="includeSymbols">Include Symbols</label>
-                <input type="checkbox" id = "includeSymbols" checked>
+                <input type="checkbox" id = "includeSymbols">
 
-                <label for="includeNums">Include Numbers</label>
-                <input type="checkbox" id = "includeNums" checked>
+                <label for="includeNumbers">Include Numbers</label>
+                <input type="checkbox" id = "includeNumbers">
             <button type="sumbit" class="button">
                 Generate Password
             </button>
