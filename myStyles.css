@@ -35,8 +35,8 @@ body {
 .inputs {
   display: grid;
   grid-template-columns: auto auto;
-  padding: 10px;
-  gap: 25px;
+  padding-top: 35px;
+  gap: 30px;
   justify-content: center;
   align-items: center;
 }
@@ -81,5 +81,20 @@ body {
 }
 
 .button:hover {
+  background-color: #1d7baa;
+}
+
+.clipboard {
+  grid-column: span 2;
+  font-weight: bold;
+  background-color: transparent;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+.clipboard:hover {
   background-color: #1d7baa;
 }

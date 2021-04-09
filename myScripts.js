@@ -57,3 +57,18 @@ function syncCharacterAmount(e) {
   characterAmountNumber.value = value
   characterAmountRange.value = value
 }
+
+function toClipBoard(){
+  var textToCopy = passwordDisplay.innerText
+ 
+  var inputElement = document.createElement('input')
+  inputElement.type = 'text'
+  inputElement.value = textToCopy
+  
+  document.body.appendChild(inputElement)
+  
+  inputElement.select()
+  document.execCommand('Copy')
+  
+  document.body.removeChild(inputElement)
+}
