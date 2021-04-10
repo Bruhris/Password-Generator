@@ -1,4 +1,3 @@
 # Password Generator Website
-A website to create a strong password
+A very basic website created with HTMl, CSS and JS to create a password
 
-**Might come back to it**
