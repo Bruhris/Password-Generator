@@ -5,29 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Generator</title>
-    <!--Links to the CSS stylesheet and the JavaScript page-->
     <link rel="stylesheet" href="myStyles.css">
-    <script src="myScripts.js"></script>
+    <script src="myScripts.js" defer></script>
 </head>
-<body>
-    <!--Put the main content of the page under a div with class of container-->
-    <div class="box">
+<body onLoad="document.getElementById('passButton').click();">
+    <div class="displayBox">
         <h1 class = "title">Generate a Password!</h1>
-        <h3 id = "password" class = "pass"></h3>
-        <form class="inputs">
+        <h3 id = "passwordDisplay" class = "password"></h3>
+        <button onclick = "toClipBoard()" class = "clipboard">
+            Copy Text
+        </button>
+        <form class="inputs" id="passwordGeneratorForm">
             <label for="length">Password Length</label>
-            <div class = "setting">
-                <input type="range" id="characterLengthRange" min="6" max="40" value="12">
-                <input class="numInput" type="number" id="characterLengthNumber" min="6" max="40" value = "12">
+            <div class = "passLength">
+                <input class = "numRange" type="range" id="characterAmountRange" min="6" max="60" value="12">
+                <input class="numInput" type="number" id="characterAmountNumber" min="6" max="60" value = "12">
             </div>
-                <label for="includeSymbols">Include Symbols</label>
-                <input type="checkbox" id = "includeSymbols">
-        
-                <label for="includeUpper">Include Uppercase</label>
-                <input type="checkbox" id = "includeUpper">
-                <label for="includeLower">Include Lowercase</label>
-                <input type="checkbox" id = "includeLower">
-            <button type="sumbit" class="button">
+                <label for="includeUppercase">Include Uppercase (e.g ABCDE)</label>
+                <input type="checkbox" id = "includeUppercase" checked>
+                
+                <label for="includeSymbols">Include Symbols (e.g: $#@!%*)</label>
+                <input type="checkbox" id = "includeSymbols" checked>
+
+                <label for="includeNumbers">Include Numbers (e.g: 12345)</label>
+                <input type="checkbox" id = "includeNumbers" checked>
+            <button id = "passButton" type="sumbit" class="button">
                 Generate Password
             </button>
         </form>
