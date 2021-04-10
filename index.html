@@ -1,17 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Generator</title>
+    <link rel="stylesheet" href="myStyles.css">
+    <script src="myScripts.js" defer></script>
 </head>
-<body>
-    <h1>Create Your Password!</h1>
-    Length of Password: <input type="number" name = "something" value="x"> <br>
-    Uppercase: <input type="checkbox" name="something" value = "on"><br>
-    Lowercase: <input type="checkbox" name="something" value = "on"><br> 
-    Symbols: <input type="checkbox" name="something" value = "on"><br>
+<body onLoad="document.getElementById('passButton').click();">
+    <div class="displayBox">
+        <h1 class = "title">Generate a Password!</h1>
+        <h3 id = "passwordDisplay" class = "password"></h3>
+        <button onclick = "toClipBoard()" class = "clipboard">
+            Copy Text
+        </button>
+        <form class="inputs" id="passwordGeneratorForm">
+            <label for="length">Password Length</label>
+            <div class = "passLength">
+                <input class = "numRange" type="range" id="characterAmountRange" min="6" max="60" value="12">
+                <input class="numInput" type="number" id="characterAmountNumber" min="6" max="60" value = "12">
+            </div>
+                <label for="includeUppercase">Include Uppercase (e.g ABCDE)</label>
+                <input type="checkbox" id = "includeUppercase" checked>
+                
+                <label for="includeSymbols">Include Symbols (e.g: $#@!%*)</label>
+                <input type="checkbox" id = "includeSymbols" checked>
 
-    <script type="text/javascript">
-        document.write("AHHHHHHH");
-    </script>
+                <label for="includeNumbers">Include Numbers (e.g: 12345)</label>
+                <input type="checkbox" id = "includeNumbers" checked>
+            <button id = "passButton" type="sumbit" class="button">
+                Generate Password
+            </button>
+        </form>
+    </div>
 </body>
 </html>

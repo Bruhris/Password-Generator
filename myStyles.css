@@ -1,0 +1,104 @@
+body {
+  background: linear-gradient(
+    153deg,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(176, 137, 196, 1) 47%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  color: Black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.displayBox {
+  background: linear-gradient(
+    90deg,
+    rgba(36, 100, 184, 1) 0%,
+    rgba(19, 116, 172, 1) 28%,
+    rgba(51, 155, 187, 1) 69%,
+    rgba(22, 190, 224, 1) 100%
+  );
+  padding: 45px;
+  border-radius: 10px;
+  border: 3px black solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.inputs {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding-top: 25px;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-weight: 500;
+  text-align: center;
+  margin: 0;
+}
+.password {
+  font-size: 23px;
+  border: 2px solid black;
+  padding: 20px;
+  border-radius: 10px;
+  height: 4ch;
+  width: 25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  word-break: break-all;
+}
+.passLength {
+  display: flex;
+  align-items: center;
+}
+
+.numInput {
+  position: relative;
+  right: 90px;
+  width: 4ch;
+}
+.numRange {
+  float: left;
+  position: relative;
+  right: 100px;
+}
+.button {
+  grid-column: span 2;
+  background-color: transparent;
+  border-radius: 10px;
+  font-weight: bolder;
+  border: 2px black solid;
+  padding: 10px;
+  cursor: pointer;
+  position: relative;
+  top: 10px;
+}
+
+.button:hover {
+  background-color: #1d7baa;
+}
+
+.clipboard {
+  font-weight: bold;
+  background-color: transparent;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+.clipboard:hover {
+  background-color: #1d7baa;
+}
