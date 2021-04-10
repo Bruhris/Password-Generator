@@ -15,7 +15,7 @@ body {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-.box {
+.displayBox {
   background: linear-gradient(
     90deg,
     rgba(36, 100, 184, 1) 0%,
@@ -35,7 +35,7 @@ body {
 .inputs {
   display: grid;
   grid-template-columns: auto auto;
-  padding-top: 35px;
+  padding-top: 25px;
   gap: 30px;
   justify-content: center;
   align-items: center;
@@ -46,8 +46,8 @@ body {
   text-align: center;
   margin: 0;
 }
-.pass {
-  font-size: 25px;
+.password {
+  font-size: 23px;
   border: 2px solid black;
   padding: 20px;
   border-radius: 10px;
@@ -58,16 +58,21 @@ body {
   justify-content: center;
   word-break: break-all;
 }
-
-.setting {
+.passLength {
   display: flex;
   align-items: center;
 }
 
 .numInput {
+  position: relative;
+  right: 90px;
   width: 4ch;
 }
-
+.numRange {
+  float: left;
+  position: relative;
+  right: 100px;
+}
 .button {
   grid-column: span 2;
   background-color: transparent;
@@ -85,7 +90,6 @@ body {
 }
 
 .clipboard {
-  grid-column: span 2;
   font-weight: bold;
   background-color: transparent;
   padding: 10px;
